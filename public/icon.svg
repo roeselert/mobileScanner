@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#101820"/>
+  <g fill="none" stroke="#f8fafc" stroke-width="24" stroke-linecap="round">
+    <path d="M120 176v-56h56"/><path d="M336 120h56v56"/>
+    <path d="M392 336v56h-56"/><path d="M176 392h-56v-56"/>
+  </g>
+  <rect x="212" y="72" width="28" height="120" fill="#38bdf8"/>
+  <rect x="256" y="72" width="28" height="120" fill="#38bdf8"/>
+  <rect x="304" y="72" width="28" height="120" fill="#f8fafc"/>
+  <rect x="76" y="212" width="120" height="28" fill="#f8fafc"/>
+  <rect x="212" y="212" width="28" height="28" fill="#f8fafc"/>
+  <rect x="256" y="212" width="28" height="28" fill="#38bdf8"/>
+  <rect x="304" y="212" width="28" height="28" fill="#f8fafc"/>
+  <rect x="348" y="212" width="28" height="28" fill="#38bdf8"/>
+  <rect x="392" y="212" width="44" height="28" fill="#f8fafc"/>
+  <rect x="212" y="320" width="28" height="120" fill="#f8fafc"/>
+  <rect x="256" y="320" width="28" height="120" fill="#38bdf8"/>
+  <rect x="304" y="320" width="28" height="120" fill="#f8fafc"/>
+</svg>
