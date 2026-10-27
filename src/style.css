@@ -52,3 +52,4 @@ button:disabled { opacity: 0.4; }
 #nfc { position: absolute; bottom: 1.25rem; left: 1.25rem; z-index: 5; }
 #torch { position: absolute; bottom: 1.25rem; right: 1.25rem; z-index: 5; }
 nav { position: static; }
+[hidden] { display: none !important; }
