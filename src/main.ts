@@ -1,7 +1,7 @@
 import './style.css';
 import { pickDecoderKind } from './decoder';
 import { createNativeDecoder, type BarcodeDecoder, type BarcodeDetectorCtor } from './decoder-adapter';
-import { createZxingDecoder } from './zxing-adapter';
+import { createZxingDecoder, prepareWasm } from './zxing-adapter';
 import { isSameScan } from './scanner';
 import { isNfcSupported, ndefToString } from './nfc';
 import type { Scan } from './types';
@@ -22,6 +22,11 @@ const decoder: BarcodeDecoder =
   nativeCtor !== undefined && pickDecoderKind(true) === 'native'
     ? createNativeDecoder(nativeCtor)
     : createZxingDecoder();
+
+// The camera keeps the live preview, but frames are decoded as stills: hand
+// the photo pipeline the wasm binary shipped from public/ so it never has to
+// hit the network and stays inside the PWA precache (globPatterns: *.wasm).
+prepareWasm({ wasmUrl: `${import.meta.env.BASE_URL}zxing_reader.wasm` });
 
 let lastScan: Scan | null = null;
 
